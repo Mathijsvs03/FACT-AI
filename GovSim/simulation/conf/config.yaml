@@ -2,7 +2,7 @@ code_version: v6.4
 group_name: ''
 
 llm: 
-  path: TheBloke/Nous-Hermes-2-Mixtral-8x7B-DPO-GPTQ
+  path: meta-llama/Llama-2-13B-chat-hf
   backend: transformers
   is_api: false
   render: false
