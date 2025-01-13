@@ -2,7 +2,7 @@ code_version: v6.4
 group_name: ''
 
 llm: 
-  path: meta-llama/Llama-2-13B-chat-hf
+  path: meta-llama/Meta-Llama-3-8B-Instruct
   backend: transformers
   is_api: false
   render: false
