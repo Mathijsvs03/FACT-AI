@@ -121,9 +121,6 @@ class Model(PathFinder):
 
     def _get_gen(self, value: Gen):
         prompt_render, input_ids = self._format_prompt()
-        print("Begin input prompt  _get_gen")
-        print(prompt_render)
-        print("End input prompt _get_gen")
 
         generation_config = GenerationConfig.from_pretrained(
             self.model.name_or_path,
@@ -178,9 +175,6 @@ class Model(PathFinder):
         res = self.tokenizer.decode(
             output[0][input_ids.shape[1] :], skip_special_tokens=False
         )
-        print("Begin response _get_gen")
-        print(res)
-        print("End response _get_gen")
         # use generation_config.eos_token_id, can be a list or a single value, detokenize and remove eos token
         if isinstance(eos_token_id, list):
             for eos_id in eos_token_id:
@@ -209,9 +203,6 @@ class Model(PathFinder):
 
     def _get_find(self, value: Find):
         prompt_render, input_ids = self._format_prompt()
-        print("Begin input prompt _get_find")
-        print(prompt_render)
-        print("End input prompt _get_find")
         generation_config = GenerationConfig.from_pretrained(
             self.model.name_or_path,
             trust_remote_code=self.trust_remote_code,
@@ -264,9 +255,6 @@ class Model(PathFinder):
         res = self.tokenizer.decode(
             output[0][input_ids.shape[1] :], skip_special_tokens=False
         )
-        print("Begin response _get_find")
-        print(res)
-        print("End response _get_find")
         # use generation_config.eos_token_id, can be a list or a single value, detokenize and remove eos token
         if isinstance(eos_token_id, list):
             for eos_id in eos_token_id:
@@ -292,9 +280,6 @@ class Model(PathFinder):
 
     def _get_select(self, value: Select):
         prompt_render, input_ids = self._format_prompt()
-        print("Begin input prompt _get_select")
-        print(prompt_render)
-        print("End input prompt _get_select")
         model_config = AutoConfig.from_pretrained(
             self.model.name_or_path, trust_remote_code=self.trust_remote_code
         )
@@ -375,9 +360,6 @@ class Model(PathFinder):
                         break
 
         res = self.tokenizer.decode(prefix[prompt_length:], skip_special_tokens=False)
-        print("Begin repsonse _get_select")
-        print(res)
-        print("End response _get_select")
         self.token_in = prompt_length
         self.token_out = len(prefix) - prompt_length
         if res.endswith(self.tokenizer.eos_token):
