@@ -51,8 +51,7 @@ def main():
         'Meta-Llama-3-8B-Instruct': 'meta-llama/Meta-Llama-3-8B-Instruct',
         'Mistral-7B-Instruct-v0.2': 'mistralai/Mistral-7B-Instruct-v0.2'
     }
-    experiments = ['fish_baseline_concurrent', 'fish_baseline_concurrent_universalization', 'fish_perturbation_no_language', 'fish_perturbation_outsider']
-
+    experiments = ['sheep_baseline_concurrent', 'sheep_baseline_concurrent_universalization', 'pollution_baseline_concurrent', 'pollution_baseline_concurrent_universalization']
 
     for model in models:
         for experiment in experiments:
