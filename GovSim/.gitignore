@@ -170,5 +170,5 @@ NOTES.md
 
 human_evaluation/data
 api_usage/*
-subskills/results/
+# subskills/results/
 .~lock.*
