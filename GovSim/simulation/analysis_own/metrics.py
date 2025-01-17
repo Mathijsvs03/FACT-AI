@@ -44,7 +44,7 @@ def survival_rate(survival_times):
     successes = 0
 
     for time in survival_times:
-        if time == 11:
+        if time == 12:
             successes += 1
         else:
             fails += 1

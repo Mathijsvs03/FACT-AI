@@ -65,7 +65,7 @@
         "over_usage": 4.0
     },
     "general": {
-        "survival_rate": 0.0,
+        "survival_rate": 0.4,
         "mean_survival": 8.8,
         "std_survival": 3.7094473981982814,
         "mean_gains": 44.36,
