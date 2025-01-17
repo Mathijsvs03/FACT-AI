@@ -39,7 +39,7 @@ def change_config(file_path, new_group_name, new_llm_path, new_seed):
 
 
 def run_experiment(model, seed, experiment):
-    command = f"python3 -m simulation.main experiment={experiment}"
+    command = f"python3 -m subskills.{experiment}"
     try:
         subprocess.run(command, shell=True, check=True)
     except subprocess.CalledProcessError as e:
