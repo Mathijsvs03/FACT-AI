@@ -1,0 +1,80 @@
+{
+    "spring-elevator-37": {
+        "gains": {
+            "persona_0": 19.0,
+            "persona_1": 13.0,
+            "persona_2": 18.0,
+            "persona_3": 20.0,
+            "persona_4": 30.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 85.6,
+        "over_usage": 100.0
+    },
+    "ancient-shape-49": {
+        "gains": {
+            "persona_0": 21.0,
+            "persona_1": 20.0,
+            "persona_2": 24.0,
+            "persona_3": 17.0,
+            "persona_4": 18.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 93.19999999999999,
+        "over_usage": 100.0
+    },
+    "snowy-music-27": {
+        "gains": {
+            "persona_0": 24.0,
+            "persona_1": 19.0,
+            "persona_2": 21.0,
+            "persona_3": 14.0,
+            "persona_4": 22.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 90.8,
+        "over_usage": 100.0
+    },
+    "blooming-aardvark-33": {
+        "gains": {
+            "persona_0": 26.0,
+            "persona_1": 22.0,
+            "persona_2": 15.0,
+            "persona_3": 19.0,
+            "persona_4": 18.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 89.60000000000001,
+        "over_usage": 100.0
+    },
+    "whole-cloud-43": {
+        "gains": {
+            "persona_0": 17.0,
+            "persona_1": 16.0,
+            "persona_2": 28.0,
+            "persona_3": 25.0,
+            "persona_4": 14.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 85.2,
+        "over_usage": 100.0
+    },
+    "general": {
+        "survival_rate": 0.0,
+        "mean_survival": 1.0,
+        "std_survival": 0.0,
+        "mean_gains": 20.0,
+        "std_gains": 0.0,
+        "mean_efficiency": 100.0,
+        "std_efficiency": 0.0,
+        "mean_equality": 88.88,
+        "std_equality": 3.071416611272392,
+        "mean_over_usage": 100.0,
+        "std_over_usage": 0.0
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "stellar-flower-137": {
+        "gains": {
+            "persona_0": 28.0,
+            "persona_1": 109.0,
+            "persona_2": 34.0,
+            "persona_3": 43.0,
+            "persona_4": 51.0
+        },
+        "survival_time": 8,
+        "efficiency": 66.25,
+        "equality": 72.9811320754717,
+        "over_usage": 5.0
+    },
+    "honest-serenity-138": {
+        "gains": {
+            "persona_0": 91.0,
+            "persona_1": 16.0,
+            "persona_2": 32.0,
+            "persona_3": 91.0,
+            "persona_4": 54.0
+        },
+        "survival_time": 12,
+        "efficiency": 47.333333333333336,
+        "equality": 70.56338028169013,
+        "over_usage": 5.0
+    },
+    "fine-lake-139": {
+        "gains": {
+            "persona_0": 48.0,
+            "persona_1": 22.0,
+            "persona_2": 26.0,
+            "persona_3": 28.0,
+            "persona_4": 40.0
+        },
+        "survival_time": 12,
+        "efficiency": 27.333333333333332,
+        "equality": 83.90243902439025,
+        "over_usage": 0.0
+    },
+    "chocolate-glitter-140": {
+        "gains": {
+            "persona_0": 21.0,
+            "persona_1": 21.0,
+            "persona_2": 55.0,
+            "persona_3": 1.0,
+            "persona_4": 15.0
+        },
+        "survival_time": 2,
+        "efficiency": 100.0,
+        "equality": 59.64601769911504,
+        "over_usage": 30.0
+    },
+    "sandy-haze-141": {
+        "gains": {
+            "persona_0": 28.0,
+            "persona_1": 45.0,
+            "persona_2": 100.0,
+            "persona_3": 86.0,
+            "persona_4": 24.0
+        },
+        "survival_time": 10,
+        "efficiency": 56.60000000000001,
+        "equality": 70.31802120141343,
+        "over_usage": 4.0
+    },
+    "general": {
+        "survival_rate": 0.0,
+        "mean_survival": 8.8,
+        "std_survival": 3.7094473981982814,
+        "mean_gains": 44.36,
+        "std_gains": 14.045298145642905,
+        "mean_efficiency": 59.503333333333345,
+        "std_efficiency": 23.987266066255515,
+        "mean_equality": 71.48219805641611,
+        "std_equality": 7.730509533005716,
+        "mean_over_usage": 8.8,
+        "std_over_usage": 10.759182125050211
+    }
+}

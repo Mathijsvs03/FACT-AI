@@ -1,0 +1,80 @@
+{
+    "lyric-valley-45": {
+        "gains": {
+            "persona_0": 10.0,
+            "persona_1": 24.0,
+            "persona_2": 25.0,
+            "persona_3": 20.0,
+            "persona_4": 21.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 86.4,
+        "over_usage": 80.0
+    },
+    "clean-valley-50": {
+        "gains": {
+            "persona_0": 10.0,
+            "persona_1": 21.0,
+            "persona_2": 10.0,
+            "persona_3": 26.0,
+            "persona_4": 33.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 75.2,
+        "over_usage": 60.0
+    },
+    "super-wildflower-41": {
+        "gains": {
+            "persona_0": 10.0,
+            "persona_1": 32.0,
+            "persona_2": 10.0,
+            "persona_3": 20.0,
+            "persona_4": 28.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 75.2,
+        "over_usage": 60.0
+    },
+    "pleasant-bush-48": {
+        "gains": {
+            "persona_0": 10.0,
+            "persona_1": 29.0,
+            "persona_2": 22.0,
+            "persona_3": 20.0,
+            "persona_4": 19.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 83.6,
+        "over_usage": 80.0
+    },
+    "rare-butterfly-53": {
+        "gains": {
+            "persona_0": 10.0,
+            "persona_1": 28.0,
+            "persona_2": 10.0,
+            "persona_3": 20.0,
+            "persona_4": 32.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 75.2,
+        "over_usage": 60.0
+    },
+    "general": {
+        "survival_rate": 0.0,
+        "mean_survival": 1.0,
+        "std_survival": 0.0,
+        "mean_gains": 20.0,
+        "std_gains": 0.0,
+        "mean_efficiency": 100.0,
+        "std_efficiency": 0.0,
+        "mean_equality": 79.11999999999999,
+        "std_equality": 4.881966816765554,
+        "mean_over_usage": 68.0,
+        "std_over_usage": 9.797958971132712
+    }
+}

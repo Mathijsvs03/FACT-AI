@@ -1,0 +1,80 @@
+{
+    "super-elevator-131": {
+        "gains": {
+            "persona_0": 31.0,
+            "persona_1": 39.0,
+            "persona_2": 10.0,
+            "persona_3": 10.0,
+            "persona_4": 10.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 68.39999999999999,
+        "over_usage": 40.0
+    },
+    "upbeat-cherry-128": {
+        "gains": {
+            "persona_0": 10.0,
+            "persona_1": 39.0,
+            "persona_2": 21.0,
+            "persona_3": 20.0,
+            "persona_4": 10.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 72.39999999999999,
+        "over_usage": 60.0
+    },
+    "skilled-donkey-130": {
+        "gains": {
+            "persona_0": 10.0,
+            "persona_1": 31.0,
+            "persona_2": 10.0,
+            "persona_3": 45.0,
+            "persona_4": 28.0
+        },
+        "survival_time": 2,
+        "efficiency": 100.0,
+        "equality": 70.64516129032259,
+        "over_usage": 50.0
+    },
+    "ethereal-cloud-129": {
+        "gains": {
+            "persona_0": 10.0,
+            "persona_1": 45.0,
+            "persona_2": 10.0,
+            "persona_3": 10.0,
+            "persona_4": 25.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 65.99999999999999,
+        "over_usage": 40.0
+    },
+    "wise-meadow-127": {
+        "gains": {
+            "persona_0": 36.0,
+            "persona_1": 18.0,
+            "persona_2": 15.0,
+            "persona_3": 11.0,
+            "persona_4": 33.0
+        },
+        "survival_time": 2,
+        "efficiency": 100.0,
+        "equality": 75.929203539823,
+        "over_usage": 70.0
+    },
+    "general": {
+        "survival_rate": 0.0,
+        "mean_survival": 1.4,
+        "std_survival": 0.4898979485566356,
+        "mean_gains": 21.48,
+        "std_gains": 1.941545775921856,
+        "mean_efficiency": 100.0,
+        "std_efficiency": 0.0,
+        "mean_equality": 70.67487296602911,
+        "std_equality": 3.394537379549556,
+        "mean_over_usage": 52.0,
+        "std_over_usage": 11.661903789690601
+    }
+}

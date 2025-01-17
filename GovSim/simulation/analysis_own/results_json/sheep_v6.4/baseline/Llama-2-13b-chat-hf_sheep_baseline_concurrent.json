@@ -1,0 +1,80 @@
+{
+    "stellar-plant-77": {
+        "gains": {
+            "persona_0": 20.0,
+            "persona_1": 27.0,
+            "persona_2": 15.0,
+            "persona_3": 23.0,
+            "persona_4": 15.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 87.2,
+        "over_usage": 100.0
+    },
+    "volcanic-galaxy-81": {
+        "gains": {
+            "persona_0": 12.0,
+            "persona_1": 24.0,
+            "persona_2": 22.0,
+            "persona_3": 19.0,
+            "persona_4": 23.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 88.8,
+        "over_usage": 100.0
+    },
+    "dainty-moon-79": {
+        "gains": {
+            "persona_0": 15.0,
+            "persona_1": 19.0,
+            "persona_2": 19.0,
+            "persona_3": 21.0,
+            "persona_4": 26.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 90.4,
+        "over_usage": 100.0
+    },
+    "lively-dew-80": {
+        "gains": {
+            "persona_0": 23.0,
+            "persona_1": 21.0,
+            "persona_2": 16.0,
+            "persona_3": 19.0,
+            "persona_4": 21.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 93.6,
+        "over_usage": 100.0
+    },
+    "mild-serenity-78": {
+        "gains": {
+            "persona_0": 12.0,
+            "persona_1": 23.0,
+            "persona_2": 20.0,
+            "persona_3": 23.0,
+            "persona_4": 22.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 90.0,
+        "over_usage": 100.0
+    },
+    "general": {
+        "survival_rate": 0.0,
+        "mean_survival": 1.0,
+        "std_survival": 0.0,
+        "mean_gains": 20.0,
+        "std_gains": 0.0,
+        "mean_efficiency": 100.0,
+        "std_efficiency": 0.0,
+        "mean_equality": 90.0,
+        "std_equality": 2.1166010488516704,
+        "mean_over_usage": 100.0,
+        "std_over_usage": 0.0
+    }
+}

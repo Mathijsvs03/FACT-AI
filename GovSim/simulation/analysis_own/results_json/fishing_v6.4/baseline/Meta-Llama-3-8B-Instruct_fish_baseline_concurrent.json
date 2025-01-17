@@ -1,0 +1,80 @@
+{
+    "zesty-dawn-44": {
+        "gains": {
+            "persona_0": 20.0,
+            "persona_1": 20.0,
+            "persona_2": 20.0,
+            "persona_3": 20.0,
+            "persona_4": 20.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 100.0,
+        "over_usage": 100.0
+    },
+    "earnest-pond-28": {
+        "gains": {
+            "persona_0": 20.0,
+            "persona_1": 20.0,
+            "persona_2": 20.0,
+            "persona_3": 20.0,
+            "persona_4": 20.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 100.0,
+        "over_usage": 100.0
+    },
+    "eager-galaxy-40": {
+        "gains": {
+            "persona_0": 20.0,
+            "persona_1": 20.0,
+            "persona_2": 20.0,
+            "persona_3": 20.0,
+            "persona_4": 20.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 100.0,
+        "over_usage": 100.0
+    },
+    "comfy-dew-35": {
+        "gains": {
+            "persona_0": 20.0,
+            "persona_1": 20.0,
+            "persona_2": 20.0,
+            "persona_3": 20.0,
+            "persona_4": 20.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 100.0,
+        "over_usage": 100.0
+    },
+    "serene-wildflower-31": {
+        "gains": {
+            "persona_0": 20.0,
+            "persona_1": 20.0,
+            "persona_2": 20.0,
+            "persona_3": 20.0,
+            "persona_4": 20.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 100.0,
+        "over_usage": 100.0
+    },
+    "general": {
+        "survival_rate": 0.0,
+        "mean_survival": 1.0,
+        "std_survival": 0.0,
+        "mean_gains": 20.0,
+        "std_gains": 0.0,
+        "mean_efficiency": 100.0,
+        "std_efficiency": 0.0,
+        "mean_equality": 100.0,
+        "std_equality": 0.0,
+        "mean_over_usage": 100.0,
+        "std_over_usage": 0.0
+    }
+}

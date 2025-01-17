@@ -1,0 +1,80 @@
+{
+    "decent-monkey-42": {
+        "gains": {
+            "persona_0": 1.0,
+            "persona_1": 33.0,
+            "persona_2": 29.0,
+            "persona_3": 10.0,
+            "persona_4": 27.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 66.8,
+        "over_usage": 60.0
+    },
+    "polar-bush-46": {
+        "gains": {
+            "persona_0": 1.0,
+            "persona_1": 23.0,
+            "persona_2": 33.0,
+            "persona_3": 10.0,
+            "persona_4": 33.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 65.2,
+        "over_usage": 60.0
+    },
+    "worthy-morning-32": {
+        "gains": {
+            "persona_0": 1.0,
+            "persona_1": 32.0,
+            "persona_2": 25.0,
+            "persona_3": 10.0,
+            "persona_4": 32.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 66.39999999999999,
+        "over_usage": 60.0
+    },
+    "glad-jazz-38": {
+        "gains": {
+            "persona_0": 1.0,
+            "persona_1": 24.0,
+            "persona_2": 31.0,
+            "persona_3": 10.0,
+            "persona_4": 34.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 65.2,
+        "over_usage": 60.0
+    },
+    "different-gorge-29": {
+        "gains": {
+            "persona_0": 1.0,
+            "persona_1": 28.0,
+            "persona_2": 40.0,
+            "persona_3": 10.0,
+            "persona_4": 21.0
+        },
+        "survival_time": 1,
+        "efficiency": 100.0,
+        "equality": 61.6,
+        "over_usage": 60.0
+    },
+    "general": {
+        "survival_rate": 0.0,
+        "mean_survival": 1.0,
+        "std_survival": 0.0,
+        "mean_gains": 20.0,
+        "std_gains": 0.0,
+        "mean_efficiency": 100.0,
+        "std_efficiency": 0.0,
+        "mean_equality": 65.03999999999999,
+        "std_equality": 1.8347751905887522,
+        "mean_over_usage": 60.0,
+        "std_over_usage": 0.0
+    }
+}
