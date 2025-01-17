@@ -31,8 +31,8 @@ def main(cfg: DictConfig):
     )
 
     experiment_storage = os.path.join(
-        os.path.dirname(__file__),
-        f"./results/subskills_check_{cfg.code_version}/{logger.run_name}",
+        os.path.dirname(__file__), "..",
+        f"./results/{cfg.group_name}/{logger.run_name}",
     )
     os.makedirs(experiment_storage, exist_ok=True)
 
@@ -68,7 +68,7 @@ def main(cfg: DictConfig):
     else:
         raise ValueError(f"Unknown cot_prompt: {cfg.llm.cot_prompt}")
 
-    NUM_RUNS = 150
+    NUM_RUNS = 15
     if cfg.debug:
         NUM_RUNS = 2
 

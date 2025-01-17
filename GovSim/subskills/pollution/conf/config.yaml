@@ -1,8 +1,8 @@
 code_version: v7.1
-
+group_name: 'Llama-2-7b'
 split: single
 
-llm: 
+llm:
   path: TheBloke/Nous-Hermes-2-Mixtral-8x7B-DPO-GPTQ
   backend: transformers
   is_api: false
@@ -21,4 +21,3 @@ debug: false
 hydra:
   run:
     dir: ./outputs/${uuid:}
-    

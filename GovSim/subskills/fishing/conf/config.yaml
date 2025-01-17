@@ -1,4 +1,5 @@
 code_version: v7.0
+group_name: 'Llama-2-7b'
 split: single
 llm:
   path: meta-llama/Llama-2-7b-chat-hf
