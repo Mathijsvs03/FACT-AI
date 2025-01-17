@@ -68,7 +68,7 @@ def main(cfg: DictConfig):
     else:
         raise ValueError(f"Unknown cot_prompt: {cfg.llm.cot_prompt}")
 
-    NUM_RUNS = 150
+    NUM_RUNS = 15
     if cfg.debug:
         NUM_RUNS = 2
 
