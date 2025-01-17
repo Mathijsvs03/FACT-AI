@@ -31,7 +31,7 @@ def main(cfg: DictConfig):
     )
 
     experiment_storage = os.path.join(
-        os.path.dirname(__file__),
+        os.path.dirname(__file__), "..",
         f"./results/subskills_check_{cfg.code_version}/{logger.run_name}",
     )
     os.makedirs(experiment_storage, exist_ok=True)
