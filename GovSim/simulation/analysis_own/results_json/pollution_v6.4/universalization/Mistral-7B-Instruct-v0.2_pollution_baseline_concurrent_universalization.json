@@ -1,0 +1,80 @@
+{
+    "brisk-flower-151": {
+        "gains": {
+            "persona_0": 10.0,
+            "persona_1": 38.0,
+            "persona_2": 42.0,
+            "persona_3": 0.0,
+            "persona_4": 10.0
+        },
+        "survival_time": 1,
+        "efficiency": 16.666666666666664,
+        "equality": 55.2,
+        "over_usage": 40.0
+    },
+    "fragrant-capybara-147": {
+        "gains": {
+            "persona_0": 27.0,
+            "persona_1": 10.0,
+            "persona_2": 33.0,
+            "persona_3": 0.0,
+            "persona_4": 30.0
+        },
+        "survival_time": 1,
+        "efficiency": 16.666666666666664,
+        "equality": 65.60000000000001,
+        "over_usage": 60.0
+    },
+    "different-dawn-148": {
+        "gains": {
+            "persona_0": 23.0,
+            "persona_1": 37.0,
+            "persona_2": 30.0,
+            "persona_3": 0.0,
+            "persona_4": 10.0
+        },
+        "survival_time": 1,
+        "efficiency": 16.666666666666664,
+        "equality": 62.4,
+        "over_usage": 60.0
+    },
+    "fragrant-planet-150": {
+        "gains": {
+            "persona_0": 10.0,
+            "persona_1": 23.0,
+            "persona_2": 26.0,
+            "persona_3": 0.0,
+            "persona_4": 41.0
+        },
+        "survival_time": 1,
+        "efficiency": 16.666666666666664,
+        "equality": 60.8,
+        "over_usage": 60.0
+    },
+    "noble-pond-149": {
+        "gains": {
+            "persona_0": 10.0,
+            "persona_1": 10.0,
+            "persona_2": 33.0,
+            "persona_3": 0.0,
+            "persona_4": 47.0
+        },
+        "survival_time": 1,
+        "efficiency": 16.666666666666664,
+        "equality": 53.2,
+        "over_usage": 40.0
+    },
+    "general": {
+        "survival_rate": 0.0,
+        "mean_survival": 1.0,
+        "std_survival": 0.0,
+        "mean_gains": 20.0,
+        "std_gains": 0.0,
+        "mean_efficiency": 16.666666666666664,
+        "std_efficiency": 0.0,
+        "mean_equality": 59.44,
+        "std_equality": 4.592864030210344,
+        "mean_over_usage": 52.0,
+        "std_over_usage": 9.797958971132712
+    }
+}

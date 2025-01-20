@@ -1,0 +1,80 @@
+{
+    "whole-bee-60": {
+        "gains": {
+            "persona_0": 63.0,
+            "persona_1": 66.0,
+            "persona_2": 85.0,
+            "persona_3": 64.0,
+            "persona_4": 143.0
+        },
+        "survival_time": 12,
+        "efficiency": 70.16666666666667,
+        "equality": 82.80285035629453,
+        "over_usage": 10.0
+    },
+    "worldly-moon-58": {
+        "gains": {
+            "persona_0": 7.0,
+            "persona_1": 58.0,
+            "persona_2": 10.0,
+            "persona_3": 5.0,
+            "persona_4": 20.0
+        },
+        "survival_time": 1,
+        "efficiency": 16.666666666666664,
+        "equality": 52.400000000000006,
+        "over_usage": 40.0
+    },
+    "floral-smoke-56": {
+        "gains": {
+            "persona_0": 5.0,
+            "persona_1": 55.0,
+            "persona_2": 20.0,
+            "persona_3": 0.0,
+            "persona_4": 20.0
+        },
+        "survival_time": 1,
+        "efficiency": 16.666666666666664,
+        "equality": 50.0,
+        "over_usage": 60.0
+    },
+    "icy-sound-51": {
+        "gains": {
+            "persona_0": 40.0,
+            "persona_1": 69.0,
+            "persona_2": 40.0,
+            "persona_3": 33.0,
+            "persona_4": 35.0
+        },
+        "survival_time": 6,
+        "efficiency": 36.16666666666667,
+        "equality": 85.80645161290322,
+        "over_usage": 16.666666666666664
+    },
+    "whole-bee-62": {
+        "gains": {
+            "persona_0": 34.0,
+            "persona_1": 21.0,
+            "persona_2": 26.0,
+            "persona_3": 25.0,
+            "persona_4": 42.0
+        },
+        "survival_time": 2,
+        "efficiency": 24.66666666666667,
+        "equality": 86.21621621621621,
+        "over_usage": 60.0
+    },
+    "general": {
+        "survival_rate": 0.2,
+        "mean_survival": 4.4,
+        "std_survival": 4.223742416388575,
+        "mean_gains": 39.44,
+        "std_gains": 23.965775597714337,
+        "mean_efficiency": 32.866666666666674,
+        "std_efficiency": 19.971479664761947,
+        "mean_equality": 71.44510363708278,
+        "std_equality": 16.58939984205725,
+        "mean_over_usage": 37.33333333333333,
+        "std_over_usage": 21.018510360579263
+    }
+}

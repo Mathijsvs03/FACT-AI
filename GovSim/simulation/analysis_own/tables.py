@@ -72,7 +72,7 @@ def get_result_list(scenario, experiment):
 
 if __name__ == '__main__':
     scenario = "fishing_v6.4"
-    experiment = "universalization"
+    experiment = "baseline"
 
     # Get the results for the specified scenario and experiment
     results = get_result_list(scenario, experiment)

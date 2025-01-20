@@ -1,0 +1,80 @@
+{
+    "glowing-silence-102": {
+        "gains": {
+            "persona_0": 22.0,
+            "persona_1": 23.0,
+            "persona_2": 10.0,
+            "persona_3": 20.0,
+            "persona_4": 25.0
+        },
+        "survival_time": 1,
+        "efficiency": 16.666666666666664,
+        "equality": 86.8,
+        "over_usage": 80.0
+    },
+    "tough-valley-106": {
+        "gains": {
+            "persona_0": 16.0,
+            "persona_1": 26.0,
+            "persona_2": 10.0,
+            "persona_3": 20.0,
+            "persona_4": 28.0
+        },
+        "survival_time": 1,
+        "efficiency": 16.666666666666664,
+        "equality": 81.60000000000001,
+        "over_usage": 80.0
+    },
+    "smart-violet-105": {
+        "gains": {
+            "persona_0": 19.0,
+            "persona_1": 14.0,
+            "persona_2": 20.0,
+            "persona_3": 18.0,
+            "persona_4": 29.0
+        },
+        "survival_time": 1,
+        "efficiency": 16.666666666666664,
+        "equality": 87.2,
+        "over_usage": 100.0
+    },
+    "wandering-sponge-103": {
+        "gains": {
+            "persona_0": 21.0,
+            "persona_1": 28.0,
+            "persona_2": 10.0,
+            "persona_3": 20.0,
+            "persona_4": 21.0
+        },
+        "survival_time": 1,
+        "efficiency": 16.666666666666664,
+        "equality": 85.2,
+        "over_usage": 80.0
+    },
+    "ruby-resonance-104": {
+        "gains": {
+            "persona_0": 19.0,
+            "persona_1": 29.0,
+            "persona_2": 10.0,
+            "persona_3": 18.0,
+            "persona_4": 24.0
+        },
+        "survival_time": 1,
+        "efficiency": 16.666666666666664,
+        "equality": 82.4,
+        "over_usage": 80.0
+    },
+    "general": {
+        "survival_rate": 0.0,
+        "mean_survival": 1.0,
+        "std_survival": 0.0,
+        "mean_gains": 20.0,
+        "std_gains": 0.0,
+        "mean_efficiency": 16.666666666666664,
+        "std_efficiency": 0.0,
+        "mean_equality": 84.64000000000001,
+        "std_equality": 2.271211130652539,
+        "mean_over_usage": 84.0,
+        "std_over_usage": 8.0
+    }
+}
