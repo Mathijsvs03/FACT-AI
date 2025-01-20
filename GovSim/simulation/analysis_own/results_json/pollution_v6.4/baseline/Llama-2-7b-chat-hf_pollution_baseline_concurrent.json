@@ -8,7 +8,7 @@
             "persona_4": 31.0
         },
         "survival_time": 1,
-        "efficiency": 100.0,
+        "efficiency": 16.666666666666664,
         "equality": 58.400000000000006,
         "over_usage": 60.0
     },
@@ -21,7 +21,7 @@
             "persona_4": 32.0
         },
         "survival_time": 1,
-        "efficiency": 100.0,
+        "efficiency": 16.666666666666664,
         "equality": 56.800000000000004,
         "over_usage": 60.0
     },
@@ -34,7 +34,7 @@
             "persona_4": 30.0
         },
         "survival_time": 1,
-        "efficiency": 100.0,
+        "efficiency": 16.666666666666664,
         "equality": 57.2,
         "over_usage": 60.0
     },
@@ -47,7 +47,7 @@
             "persona_4": 36.0
         },
         "survival_time": 1,
-        "efficiency": 100.0,
+        "efficiency": 16.666666666666664,
         "equality": 52.0,
         "over_usage": 60.0
     },
@@ -60,7 +60,7 @@
             "persona_4": 32.0
         },
         "survival_time": 1,
-        "efficiency": 100.0,
+        "efficiency": 16.666666666666664,
         "equality": 58.400000000000006,
         "over_usage": 60.0
     },
@@ -70,7 +70,7 @@
         "std_survival": 0.0,
         "mean_gains": 20.0,
         "std_gains": 0.0,
-        "mean_efficiency": 100.0,
+        "mean_efficiency": 16.666666666666664,
         "std_efficiency": 0.0,
         "mean_equality": 56.56000000000002,
         "std_equality": 2.3677837739118006,

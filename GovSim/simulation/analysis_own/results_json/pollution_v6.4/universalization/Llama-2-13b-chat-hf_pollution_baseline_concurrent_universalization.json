@@ -8,7 +8,7 @@
             "persona_4": 10.0
         },
         "survival_time": 1,
-        "efficiency": 100.0,
+        "efficiency": 16.666666666666664,
         "equality": 68.39999999999999,
         "over_usage": 40.0
     },
@@ -21,7 +21,7 @@
             "persona_4": 10.0
         },
         "survival_time": 1,
-        "efficiency": 100.0,
+        "efficiency": 16.666666666666664,
         "equality": 72.39999999999999,
         "over_usage": 60.0
     },
@@ -34,7 +34,7 @@
             "persona_4": 28.0
         },
         "survival_time": 2,
-        "efficiency": 100.0,
+        "efficiency": 20.666666666666668,
         "equality": 70.64516129032259,
         "over_usage": 50.0
     },
@@ -47,7 +47,7 @@
             "persona_4": 25.0
         },
         "survival_time": 1,
-        "efficiency": 100.0,
+        "efficiency": 16.666666666666664,
         "equality": 65.99999999999999,
         "over_usage": 40.0
     },
@@ -60,7 +60,7 @@
             "persona_4": 33.0
         },
         "survival_time": 2,
-        "efficiency": 100.0,
+        "efficiency": 18.833333333333336,
         "equality": 75.929203539823,
         "over_usage": 70.0
     },
@@ -70,8 +70,8 @@
         "std_survival": 0.4898979485566356,
         "mean_gains": 21.48,
         "std_gains": 1.941545775921856,
-        "mean_efficiency": 100.0,
-        "std_efficiency": 0.0,
+        "mean_efficiency": 17.9,
+        "std_efficiency": 1.6179548132682149,
         "mean_equality": 70.67487296602911,
         "std_equality": 3.394537379549556,
         "mean_over_usage": 52.0,

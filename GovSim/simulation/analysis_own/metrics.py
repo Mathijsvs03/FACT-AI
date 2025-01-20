@@ -52,7 +52,7 @@ def survival_rate(survival_times):
     return successes / (successes + fails)
 
 def efficiency(data):
-    total_time = survival_time(data)
+    total_time = 12
 
     initial_resources = data["persona_0"][0]["resource_in_pool_before_harvesting"]
     initial_threshold = (initial_resources // 2)
@@ -78,7 +78,7 @@ def equality(data):
 
 def over_usage(data):
     over_usage_events = 0
-    total_events = (survival_time(data)) * len(data)
+    total_events = survival_time(data) * len(data)
 
     for persona in data:
         for event in data[persona]:
@@ -196,7 +196,7 @@ def write_group_runs(group, experiment):
 
 if __name__ == '__main__':
     experiments = [["fishing_v6.4", "fish"], ["sheep_v6.4", "sheep"], ["pollution_v6.4", "pollution"]]
-    models = ["Meta-Llama-3-8B-Instruct", "Llama-2-7b-chat-hf", "Llama-2-13b-chat-hf", "Mistral-7b-Instruct-v0.2"]
+    models = ["Meta-Llama-3-8B-Instruct", "Llama-2-7b-chat-hf", "Llama-2-13b-chat-hf", "Mistral-7B-Instruct-v0.2"]
 
     tests = ["baseline_concurrent_universalization", "baseline_concurrent",]
 
