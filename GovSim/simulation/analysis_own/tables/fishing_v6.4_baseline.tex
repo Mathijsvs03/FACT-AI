@@ -1,0 +1,18 @@
+
+    \begin{table}[H]
+    \centering
+    \setlength\tabcolsep{5pt} % default value: 6pt
+    \begin{tabular}{lcccccc}
+    \hline
+    \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Model}}} & \textbf{\begin{tabular}[c]{@{}c@{}}Survival\\ Rate\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Survival\\ Time\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Total\\ Gain\end{tabular}} & \textbf{Efficiency} & \textbf{Equality} & \textbf{Over-usage} \\
+    \multicolumn{1}{c}{}                                & Max = 100              & Max = 12               & Max = 120           & Max = 100           & Max = 1           & Min = 0             \\ \hline
+    \multicolumn{7}{l}{\textit{\textbf{Open-Weights Models}}}                                                                                                                                   \\
+    Llama-2-7b                                          & 0.00                    & 1.00$\pm$\scriptsize{0.0}                    & 20.00$\pm$\scriptsize{0.0}                 & 16.67$\pm$\scriptsize{0.0}                 & 90.24$\pm$\scriptsize{4.06}               & 100.00$\pm$\scriptsize{0.0}                 \\
+    Llama-2-13b                                         & 0.00                    & 1.00$\pm$\scriptsize{0.0}                    & 20.00$\pm$\scriptsize{0.0}                 & 16.67$\pm$\scriptsize{0.0}                 & 88.88$\pm$\scriptsize{4.26}              & 100.00$\pm$\scriptsize{0.0}                \\
+    Llama-3-8b                                          & 0.00                   & 1.00$\pm$\scriptsize{0.0}                   & 20.00$\pm$\scriptsize{0.0}                & 16.67$\pm$\scriptsize{0.0}                & 100.00$\pm$\scriptsize{0.0}              & 100.00$\pm$\scriptsize{0.0}                \\
+    Mistral-7b                                          & 0.00                   & 1.00$\pm$\scriptsize{0.0}                   & 20.00$\pm$\scriptsize{0.0}                & 16.67$\pm$\scriptsize{0.0}                & 65.04$\pm$\scriptsize{2.55}              & 60.00$\pm$\scriptsize{0.0}                \\ \hline
+    \end{tabular}
+    \caption{Experiment: \textit{default - Fishing}}
+    \label{tab:fishing_default}
+    \end{table}
+    

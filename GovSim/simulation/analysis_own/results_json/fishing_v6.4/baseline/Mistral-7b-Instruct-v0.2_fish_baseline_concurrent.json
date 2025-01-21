@@ -68,13 +68,18 @@
         "survival_rate": 0.0,
         "mean_survival": 1.0,
         "std_survival": 0.0,
+        "moe_confidence_survival": 0.0,
         "mean_gains": 20.0,
         "std_gains": 0.0,
+        "moe_confidence_gains": 0.0,
         "mean_efficiency": 16.666666666666664,
         "std_efficiency": 0.0,
+        "moe_confidence_efficiency": 0.0,
         "mean_equality": 65.03999999999999,
         "std_equality": 1.8347751905887522,
+        "moe_confidence_equality": 2.5470762985242494,
         "mean_over_usage": 60.0,
-        "std_over_usage": 0.0
+        "std_over_usage": 0.0,
+        "moe_confidence_over_usage": 0.0
     }
 }

@@ -68,13 +68,18 @@
         "survival_rate": 0.2,
         "mean_survival": 4.4,
         "std_survival": 4.223742416388575,
+        "moe_confidence_survival": 5.863494478799191,
         "mean_gains": 39.44,
         "std_gains": 23.965775597714337,
+        "moe_confidence_gains": 33.26983017527141,
         "mean_efficiency": 32.866666666666674,
         "std_efficiency": 19.971479664761947,
+        "moe_confidence_efficiency": 27.724858479392843,
         "mean_equality": 71.44510363708278,
         "std_equality": 16.58939984205725,
+        "moe_confidence_equality": 23.029778994824493,
         "mean_over_usage": 37.33333333333333,
-        "std_over_usage": 21.018510360579263
+        "std_over_usage": 21.018510360579263,
+        "moe_confidence_over_usage": 29.178370104589757
     }
 }

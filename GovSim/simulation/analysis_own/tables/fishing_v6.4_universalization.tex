@@ -1,0 +1,18 @@
+
+    \begin{table}[H]
+    \centering
+    \setlength\tabcolsep{5pt} % default value: 6pt
+    \begin{tabular}{lcccccc}
+    \hline
+    \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Model}}} & \textbf{\begin{tabular}[c]{@{}c@{}}Survival\\ Rate\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Survival\\ Time\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Total\\ Gain\end{tabular}} & \textbf{Efficiency} & \textbf{Equality} & \textbf{Over-usage} \\
+    \multicolumn{1}{c}{}                                & Max = 100              & Max = 12               & Max = 120           & Max = 100           & Max = 1           & Min = 0             \\ \hline
+    \multicolumn{7}{l}{\textit{\textbf{Open-Weights Models}}}                                                                                                                                   \\
+    Llama-2-7b                                          & 0.00                    & 1.00$\pm$\scriptsize{0.0}                    & 20.00$\pm$\scriptsize{0.0}                 & 16.67$\pm$\scriptsize{0.0}                 & 79.12$\pm$\scriptsize{6.78}               & 68.00$\pm$\scriptsize{13.6}                 \\
+    Llama-2-13b                                         & 0.00                    & 1.00$\pm$\scriptsize{0.0}                    & 20.00$\pm$\scriptsize{0.0}                 & 16.67$\pm$\scriptsize{0.0}                 & 75.20$\pm$\scriptsize{8.01}              & 72.00$\pm$\scriptsize{13.6}                \\
+    Llama-3-8b                                          & 0.60                   & 10.40$\pm$\scriptsize{2.72}                   & 68.28$\pm$\scriptsize{16.5}                & 56.90$\pm$\scriptsize{13.75}                & 88.31$\pm$\scriptsize{10.37}              & 11.33$\pm$\scriptsize{13.28}                \\
+    Mistral-7b                                          & 0.20                   & 4.40$\pm$\scriptsize{5.86}                   & 39.44$\pm$\scriptsize{33.27}                & 32.87$\pm$\scriptsize{27.72}                & 71.45$\pm$\scriptsize{23.03}              & 37.33$\pm$\scriptsize{29.18}                \\ \hline
+    \end{tabular}
+    \caption{Experiment: \textit{Universalization - Fishing}}
+    \label{tab:fishing_universalization}
+    \end{table}
+    
