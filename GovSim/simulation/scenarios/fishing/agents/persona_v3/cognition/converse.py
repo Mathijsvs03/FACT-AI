@@ -30,12 +30,27 @@ class FishingConverseComponent(ConverseComponent):
         current_context: str,
         agent_resource_num: dict[str, int],
     ) -> tuple[list[tuple[str, str]], str]:
+        print("THE CURRENT CONTEXT")
+        print(current_context)
         current_conversation: list[tuple[PersonaIdentity, str]] = []
 
         html_interactions = []
 
+        # TOEGEVOEGD:
+        if current_location == "harbour":
+            print("het komt in de eerste in de converse group")
+            current_conversation.append(
+                (
+                    PersonaIdentity("framework", "Mayor"),
+                    (
+                        f"Task: Please start negotiating with eachother and state how many tons of fish you are planning to fish this month and why."
+                        f"Make sure all the fishermen get to say something in the conversation."
+                    ),
+                ),
+            )
+        # TOEGEVOEGD:
         # Inject fake conversation about how many fish each person caught
-        if (
+        elif (
             self.cfg.inject_resource_observation
             and self.cfg.inject_resource_observation_strategy == "individual"
         ):
@@ -75,8 +90,10 @@ class FishingConverseComponent(ConverseComponent):
         max_conversation_steps = self.cfg.max_conversation_steps  # TODO
 
         current_persona = self.persona.identity
-
+        print("THE CURRENT PERSONA")
+        print(current_persona.name)
         while True:
+            print("HOE VAAK HIERIN")
             focal_points = [current_context]
             if len(current_conversation) > 0:
                 # Last 4 utterances
@@ -111,6 +128,7 @@ class FishingConverseComponent(ConverseComponent):
                 break
             else:
                 current_persona = self.other_personas[next_name].identity
+        print("UIT DE LOOP")
 
         summary_conversation, h = prompt_summarize_conversation_in_one_sentence(
             self.model, self.conversation_render(current_conversation)
@@ -120,17 +138,19 @@ class FishingConverseComponent(ConverseComponent):
         resource_limit, h = prompt_find_harvesting_limit_from_conversation(
             self.model, self.conversation_render(current_conversation)
         )
+        print("NA DE RESOURCE LIMIT")
         html_interactions.append(h)
 
         for persona in target_personas:
             p = self.other_personas[persona.name]
+
             p.store.store_chat(
                 summary_conversation,
                 self.conversation_render(current_conversation),
                 self.persona.current_time,
             )
             p.reflect.reflect_on_convesation(
-                self.conversation_render(current_conversation)
+                self.conversation_render(current_conversation), current_time
             )
 
             if resource_limit is not None:

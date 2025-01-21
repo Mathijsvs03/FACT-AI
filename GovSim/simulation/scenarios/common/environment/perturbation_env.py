@@ -124,6 +124,7 @@ class PerturbationEnv(ConcurrentEnv):
         elif self.phase == "restaurant":
             assert action.location == "restaurant"
             self._step_restaurant(action)
+        # in de home fase dan vindt de termination plaats
         elif self.phase == "home":
             assert action.location == "home"
             self._step_home(action)
@@ -176,6 +177,7 @@ class PerturbationEnv(ConcurrentEnv):
 
         return (
             self.agent_selection,
+            # HIERIN DAN WORDT DE OBS AANGEPAST
             self._observe(self.agent_selection),
             self.rewards,
             self.terminations,

@@ -25,12 +25,21 @@ class ReflectComponent(Component):
                 self.persona.store.store_thought(insight, self.persona.current_time)
                 acc.append(insight)
 
-    def reflect_on_convesation(self, conversation: list[tuple[str, str]]):
+    def reflect_on_convesation(self, conversation: list[tuple[str, str]], current_time=None):
         planning = self.prompt_planning_thought_on_conversation(
             self.model, self.persona.identity, conversation
         )  # TODO should be this be store in scratch for planning?
-        self.persona.store.store_thought(planning, self.persona.current_time)
         memo = self.prompt_memorize_from_conversation(
             self.model, self.persona.identity, conversation
         )
-        self.persona.store.store_thought(memo, self.persona.current_time)
+
+        # HET GAAT IN DEZE FUNCTIE FOUT OMDAT NIET IEDEREEN EERST IN DE LOOP KOMT
+        # TOEGEVOEGD:
+        if hasattr(self.persona, 'current_time'):
+            self.persona.store.store_thought(planning, self.persona.current_time)
+            self.persona.store.store_thought(memo, self.persona.current_time)
+        else:
+            self.persona.store.store_thought(planning, current_time)
+            self.persona.store.store_thought(memo, current_time)
+        # TOEGEVOEGD:
+

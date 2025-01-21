@@ -167,9 +167,16 @@ class ConcurrentEnv:
 
         Depending on the current phase, the observation will be different
         """
-
-        if self.phase == self.POOL_LOCATION:
+        # TOEGEVOEGD:
+        if self.phase == "communicate":
+            # nog kijken of dit moet
+            state = self._observe_restaurant(agent)
+        # TOEGEVOEGD:
+        elif self.phase == self.POOL_LOCATION:
             state = self._observe_pool(agent)
+            # TOEGEVOEGD:
+            self.cfg.start_with_communication = False
+            # TOEGEVOEGD:
         elif self.phase == "pool_after_harvesting":
             state = self._observe_pool_after_harvesting(agent)
         elif self.phase == "restaurant":
@@ -190,7 +197,12 @@ class ConcurrentEnv:
         self.internal_global_state["collected_resource"][agent] = 0
         self.internal_global_state["wanted_resource"][agent] = 0
         self.internal_global_state["last_collected_resource"][agent] = 0
-        self.internal_global_state["next_location"][agent] = self.POOL_LOCATION
+
+        # het moet naar start with conversation
+        if self.cfg.start_with_communication:
+            self.internal_global_state["next_location"][agent] = "harbour"
+        else:
+            self.internal_global_state["next_location"][agent] = self.POOL_LOCATION
         self.internal_global_state["next_time"][agent] = datetime(2024, 1, 1, 1, 0, 0)
 
         self.rewards[agent] = 0.0
@@ -228,9 +240,19 @@ class ConcurrentEnv:
 
         self._agent_selector = agent_selector(self.agents)
         self.agent_selection = self._agent_selector.next()
-        self._phase_selector = agent_selector(
-            [self.POOL_LOCATION, "pool_after_harvesting", "restaurant", "home"]
-        )
+
+        # TOEGEVOEGD:
+        print(self.cfg)
+        if self.cfg.start_with_communication:
+            self._phase_selector = agent_selector(
+                ["communicate", self.POOL_LOCATION, "pool_after_harvesting", "restaurant", "home"]
+            )
+        # TOEGEVOEGD:
+        else:
+            self._phase_selector = agent_selector(
+                [self.POOL_LOCATION, "pool_after_harvesting", "restaurant", "home"]
+            )
+
         self.phase = self._phase_selector.next()
 
         return self.agent_selection, self._observe(self.agent_selection)
@@ -403,7 +425,12 @@ class ConcurrentEnv:
 
         assert action.agent_id == self.agent_selection
 
-        if self.phase == self.POOL_LOCATION:
+        # TOEGEVOEGD:
+        if self.phase == "harbour":
+            assert action.location == "harbour"
+            # self._step_harbour(action)
+            pass
+        elif self.phase == self.POOL_LOCATION:
             assert action.location == self.POOL_LOCATION
             assert type(action) == PersonaActionHarvesting
             self._step_lake_bet(action)

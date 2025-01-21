@@ -10,11 +10,11 @@ defaults:
 
 env:
   name: fish_baseline_concurrent
-  class_name: fishing_perturbation_concurrent_env # use to select which code 
+  class_name: fishing_perturbation_concurrent_env # use to select which code
   max_num_rounds: 12
   initial_resource_in_pool: 100
   poupulation_change_after_round: double_100_cap
-  observation_other_agents_harvesting: true # true, false 
+  observation_other_agents_harvesting: true # true, false
   language_nature: unconstrained #none, unconstrained
   num_agents: 5
   harvesting_order: concurrent # random-sequential, concurrent
@@ -25,11 +25,12 @@ env:
     # - perturbation:
     #     round: none # [0-max_num_rounds)
     #     # as some of the env above
-    
+  start_with_communication: true
+
 
 personas:
   num: 5
-  persona_0: 
+  persona_0:
     name: John
   persona_1:
     name: Kate
@@ -55,6 +56,9 @@ agent:
     inject_resource_observation_strategy: manager # individual, manager
     max_conversation_steps: 10
     prompt_utterance: one_shot # one_shot, cot
+    # TOEGEVOEGD:
+    start_with_communication: true
+    # TOEGOEVOEGD:
 
   store:
     expiration_delta:

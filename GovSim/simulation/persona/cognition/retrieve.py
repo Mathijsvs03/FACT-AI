@@ -128,13 +128,12 @@ class RetrieveComponent(Component):
         nodes = self.associative_memory.get_nodes_for_retrieval(
             self.persona.current_time
         )
-
         recency_scores = self._recency_retrieval(nodes)
         importance_scores = self._importance_retrieval(nodes)
-
         acc_nodes = dict()
 
         for focal_point in focal_points:
+            print(focal_point)
             relevance_scores = self._relevance_retrieval(nodes, focal_point)
 
             # combine scores

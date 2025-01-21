@@ -26,6 +26,10 @@ class FishingConcurrentEnv(ConcurrentEnv):
         self, cfg: DictConfig, experiment_storage: str, map_id_to_name: dict[str, str]
     ) -> None:
         super().__init__(cfg, experiment_storage, map_id_to_name)
+        # TOEGEVOEGD:
+        if cfg.start_with_communication:
+            self.start_with_communication = True
+        # TOEGEVOEGD:
         self.POOL_LOCATION = "lake"
 
     def _prompt_pool_amount_of_resource(self):

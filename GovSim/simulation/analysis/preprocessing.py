@@ -55,9 +55,9 @@ def get_summary_runs(subset_name, WANDB=True):
 
     if "final" in subset_name:
         WANDB = False
-
     if WANDB:
         api = wandb.Api(timeout=30)
+
         runs = api.runs("EMS", filters={"tags": {"$nin": ["skip"]}})
         for r in runs:
             if (
@@ -86,6 +86,7 @@ def get_summary_runs(subset_name, WANDB=True):
                 ".hydra/config.yaml",
             )
             flat_data = {}
+
             if os.path.exists(run_path):
                 # Read the YAML file
                 with open(run_path, "r") as file:
@@ -168,6 +169,7 @@ def get_summary_runs(subset_name, WANDB=True):
                 )
 
     summary_df = pd.concat(acc)
+
     non_relevant = columns_non_relevant(summary_df)
     if len(summary_df) <= 1:
         non_relevant = []

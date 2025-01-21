@@ -48,8 +48,9 @@ class PersonaAgent:
     ) -> None:
         self.cfg = cfg
         self.base_path = base_path
+        # make the associative memory
         os.makedirs(base_path, exist_ok=True)
-
+        
         self.memory = memory_cls(base_path)
         self.perceive = perceive_cls(model)
         self.retrieve = retrieve_cls(model, self.memory, embedding_model)

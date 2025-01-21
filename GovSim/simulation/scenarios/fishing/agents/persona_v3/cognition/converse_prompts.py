@@ -63,6 +63,7 @@ def prompt_converse_utterance_in_group(
         lm += REPONSE + "[fill in]\n"
         lm += ANSWER_STOP + "[yes/no]\n"
         lm += NEXT_SPEAKER + "[fill in]\n"
+        print(lm.chat)
     with assistant():
         lm += REPONSE
         lm = model.gen(
@@ -72,17 +73,23 @@ def prompt_converse_utterance_in_group(
             stop_regex=r"Conversation conclusion by me:",  # name can be mispelled by LLM sometimes
         )
         utterance = lm["utterance"].strip()
+
+
         if len(utterance) > 0 and utterance[-1] == '"' and utterance[0] == '"':
             utterance = utterance[1:-1]
         lm += ANSWER_STOP
+        # WAAAROM HIER UTTERANCE ENDED
         lm = model.select(
             lm,
             name="utterance_ended",
             options=["yes", "no", "No", "Yes"],
             default_value="yes",
         )
-        utterance_ended = lm["utterance_ended"].lower() == "yes"
 
+        print(lm["utterance_ended"])
+        utterance_ended = lm["utterance_ended"].lower() == "yes"
+        print(utterance_ended)
+        utterance_ended = True
         if utterance_ended:
             next_speaker = None
         else:

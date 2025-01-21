@@ -8,7 +8,9 @@ from pathfinder import Model
 
 from .logger import WandbLogger
 
-
+# OUR COMMENT: This wrapper provides a higher-level abstraction for interacting
+# with with the language model and uses the wandbLogger to log each step of the reasoning process
+# KIJKEN WAAR DEZE CLASS WORDT GEINITIALISEER
 class ModelWandbWrapper:
     def __init__(
         self,
@@ -31,12 +33,14 @@ class ModelWandbWrapper:
         self.seed = seed
         self.is_api = is_api
 
+    # OUR COMMENT: begins new reasoning chain logging its metadata using WandB
     def start_chain(
         self,
         agent_name,
         phase_name,
         query_name,
     ):
+        # OUR COMMENT: get the current_agent_span
         self.agent_chain = self.wanbd_logger.get_agent_chain(agent_name, phase_name)
         self.chain = self.wanbd_logger.start_chain(phase_name + "::" + query_name)
         return self.base_lm
@@ -89,8 +93,31 @@ class ModelWandbWrapper:
         top_p=None,
     ):
         start_time_ms = datetime.now().timestamp() * 1000
-        prompt = previous_lm._current_prompt()
+        '''
+        Example prompt: <|begin_of_text|><|start_header_id|>user<|end_header_id|>
 
+        You are John, a fisherman, and you fish every month in a lake along with four other
+        fishermen (Kate, Jack, Emma, Luke). The lake has a carrying capacity of 100 tons of fish.
+        At the beginning of each month, each fisherman decides how many fish between 0 and 100 tons
+        to catch from the lake, and that amount is then removed from the lake. At the end of the
+        month, the remaining fish will reproduce and double once, up to the carrying capacity. For
+        every ton of fish caught, a fisherman earns one thousand dollars. Each fisherman's goal is to
+        optimize his income in the long run over many months. At the end of each month, the number of fish
+        caught by each fisherman will be revealed, and the fishermen will have the opportunity to communicate
+        with each other. They can use this as an opportunity to negotiate and persuade others to influence their
+        behavior in the next month. For example, if there are 90 tons of fish at the beginning of the month and the
+        five fishermen catch a total of 30 fish, there will be 60 tons of fish left at the end of the month before
+        reproduction, and 100 tons after reproduction.
+        Location: lake
+        Date: 2024-01-01
+
+        Key memories of John (format: YYYY-MM-DD: memory):
+        - 2024-01-01: Before everyone fishes, there are 100 tons of fish in the lake.
+
+        Task: With a fishing range set between 0-100, how many tons of fish would you catch this month? Let's think step-by-step. Put the final answer after "Answer:", example Answer: N tons.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+        '''
+        # so you get the prompt from the previous lm
+        prompt = previous_lm._current_prompt()
         if temperature is None:
             temperature = self.temperature
             top_p = self.top_p
@@ -98,6 +125,8 @@ class ModelWandbWrapper:
             top_p = 1.0
 
         try:
+            # again call the add je voegt dus het gegenereerde antwoord
+            # aan de previous_lm
             lm: Model = previous_lm + pathfinder.gen(
                 name=name,
                 max_tokens=max_tokens,
@@ -119,7 +148,6 @@ class ModelWandbWrapper:
                 print(lm)
                 print("-" * 20)
 
-            # Logging
             end_time_ms = datetime.now().timestamp() * 1000
             self.wanbd_logger.log_trace_llm(
                 chain=self.chain,
@@ -153,9 +181,11 @@ class ModelWandbWrapper:
         temperature=None,
         top_p=None,
     ):
+        # in de eerste phase vgm of gwn na de Gen dan komt het hiering, the previous lm
+        # bevat dan de input prompt en de gegenereerde
         start_time_ms = datetime.now().timestamp() * 1000
         prompt = previous_lm._current_prompt()
-
+        # de current prompt in de find bestaat uit de gen en de response
         if temperature is None:
             temperature = self.temperature
             top_p = self.top_p
@@ -163,6 +193,7 @@ class ModelWandbWrapper:
             top_p = 1.0
 
         try:
+            # in de find
             lm: Model = previous_lm + pathfinder.find(
                 name=name,
                 max_tokens=max_tokens,
@@ -173,6 +204,7 @@ class ModelWandbWrapper:
             )
             res = lm[name]
         except Exception as e:
+            # bij mij komt het in de exception
             warnings.warn(
                 f"An exception occured: {e}: {traceback.format_exc()}\nReturning default value in find",
                 RuntimeWarning,

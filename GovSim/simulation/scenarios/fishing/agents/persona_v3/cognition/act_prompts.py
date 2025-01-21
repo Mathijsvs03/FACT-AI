@@ -28,6 +28,7 @@ def prompt_action_choose_amount_of_fish_to_catch(
 ):
     lm = model.start_chain(identity.name, "fishing_cognition_act", "choose_act_options")
 
+    # first call the add 7 times
     with user():
         lm += f"{get_sytem_prompt(identity)}\n"
         lm += location_time_info(current_location, current_time)
@@ -37,6 +38,7 @@ def prompt_action_choose_amount_of_fish_to_catch(
         lm += reasoning_steps_prompt()
         lm += ' Put the final answer after "Answer:", example Answer: N tons.'
 
+    # now we go to the gen and give the lm which contains the prompt
     with assistant():
         lm = model.gen(
             lm,
@@ -44,6 +46,9 @@ def prompt_action_choose_amount_of_fish_to_catch(
             stop_regex=r"Answer:|So, the answer is:|\*\*Answer\*\*:",
             save_stop_text=True,
         )
+        # in de eerste ronde de LM chat in de assistent bevat de input en de response
+        # achter elkaar
+
         lm = model.find(
             lm,
             regex=r"\d+",
@@ -53,7 +58,6 @@ def prompt_action_choose_amount_of_fish_to_catch(
         )
         option = int(lm["option"])
         reasoning = lm["reasoning"]
-
     model.end_chain(identity.name, lm)
 
     return option, lm.html()

@@ -56,6 +56,7 @@ class PathFinder:
     def _consume_assistant_text(self, value):
         pass
 
+    # this gets called
     def __add__(self, value):
         lm = self.copy()
 
@@ -92,10 +93,17 @@ class PathFinder:
                         f"{value} can be used only in assistant block, not in"
                         f" {lm.chat[-1]['role']} block!"
                     )
+            # when the pathfinder.gen then it enters this gen statement
+            # dit gebeurt de allerallereerste keer en dan wordt dit ant
+            # woord dus toegevoegd aan de lm
             if isinstance(value, Gen):
+                # this is the response from the LLM
                 res = lm._get_gen(value)
+                # this is the response with the Solution:
                 original_res = res
             elif isinstance(value, Find):
+                # in de find wanneer je + pathfinder doet dan
+                # hierin word ook de prompt gerenderd
                 res, original_res = lm._get_find(value)
             elif isinstance(value, Select):
                 res = lm._get_select(value)
@@ -108,7 +116,6 @@ class PathFinder:
             else:
                 lm.chat += original_res
             lm._variables[value.name] = res
-
         return lm
 
     def __getitem__(self, key):

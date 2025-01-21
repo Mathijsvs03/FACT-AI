@@ -28,6 +28,7 @@ def compute_survival_months_stats(df):
                 collapsed.append(False)
             acc.append(survival_months)
 
+    # gemiddelde van de survival months? en de standarddeviation en de confidence interval
     mean = np.mean(acc)
     std = np.std(acc)
     ci = sms.DescrStatsW(acc).tconfint_mean(0.05) if len(acc) > 1 else [0, 0]

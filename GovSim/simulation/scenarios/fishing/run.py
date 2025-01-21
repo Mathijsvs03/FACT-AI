@@ -17,6 +17,7 @@ def run(
     embedding_model: EmbeddingModel,
     experiment_storage: str,
 ):
+    print("START WITH CONVERSATION: ", cfg.env.start_with_communication)
     if cfg.agent.agent_package == "persona_v3":
         from .agents.persona_v3 import FishingPersona
         from .agents.persona_v3.cognition import utils as cognition_utils
@@ -75,10 +76,11 @@ def run(
         raise ValueError(f"Unknown environment class: {cfg.env.class_name}")
     agent_id, obs = env.reset()
 
+
     while True:
         agent = personas[agent_id]
+        # what kind of action the agent want to do
         action = agent.loop(obs)
-
         (
             agent_id,
             obs,

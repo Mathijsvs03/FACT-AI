@@ -12,8 +12,12 @@ logger = logging.getLogger("fontTools.subset")
 logger.setLevel(logging.WARNING)
 
 
+# OUR COMMENT: wandbLogger handles logging of chains, events, and results of
+# interactions with the LM to WandB. It tracks things like prompts, responses,
+# system messages, token usage, and overall execution flow
 class WandbLogger:
     def __init__(self, scenario_name, configs, debug=False, tags=[]) -> None:
+        # intialize the wandb logging session
         run = wandb.init(
             project="EMS",
             group=scenario_name,
@@ -38,12 +42,17 @@ class WandbLogger:
 
         self.html_logs = {}
 
+    # OUR COMMENT: ensures the logger tracks the correct agent and phase
     def get_agent_chain(self, agent_name, phase_name):
         start_time_ms = datetime.datetime.now().timestamp() * 1000
+        # OUR COMMENT: check if the current agent or phase has changed: this
+        # happens when the agent in the experiment is changed or the phase is changed
+        # so a new agent starts or
         if (
             self.current_agent_name != agent_name
             or self.current_phase_name != phase_name
         ):
+            # OUR COMMENT: if the agent span is not none then
             if self.current_agent_span is not None:
                 TFS = self.token_usage_agent / (
                     (
@@ -56,6 +65,7 @@ class WandbLogger:
                     (self.current_agent_span._span.end_time_ms - self.start_time_ms)
                     / 1000
                 )
+                # OUR COMMENT: tracetree used to log and track metadata, timing, inputs, and outputs of the agenst activity
                 t = trace_tree.WBTraceTree(
                     self.current_agent_span._span, self.current_agent_span._model_dict
                 )
@@ -74,6 +84,8 @@ class WandbLogger:
             self.current_agent_name = agent_name
             self.current_phase_name = phase_name
             self.token_usage_agent = 0
+            # OUR COMMENT: a new agent span gets created to reflect the context now (you store the phase)
+            # this happens after the other current_agent_span gets logged with wandb
             self.current_agent_span = trace_tree.Trace(
                 name=agent_name,
                 kind=trace_tree.SpanKind.AGENT,
