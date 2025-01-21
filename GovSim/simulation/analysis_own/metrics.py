@@ -1,6 +1,29 @@
 import json
 import os
 import numpy as np
+from scipy.stats import t
+
+def calculate_confidence_interval(means, confidence=0.95):
+    n = len(means)  # Number of samples
+    if n == 0:
+        raise ValueError("The list of means is empty.")
+
+    # Calculate the sample mean and standard deviation
+    sample_mean = np.mean(means)
+    sample_std = np.std(means, ddof=1)  # ddof=1 for unbiased sample standard deviation
+
+    # Calculate the critical t-value
+    t_value = t.ppf((1 + confidence) / 2, df=n-1)
+
+    # Calculate the margin of error
+    margin_of_error = t_value * (sample_std / np.sqrt(n))
+
+    # Calculate the confidence interval
+    lower_bound = sample_mean - margin_of_error
+    upper_bound = sample_mean + margin_of_error
+
+    return sample_mean, lower_bound, upper_bound, margin_of_error
+
 
 def gain(data):
     gains = {}
@@ -173,18 +196,23 @@ def write_group_runs(group, experiment):
 
     run_data["general"]["mean_survival"] = np.mean(survival_times)
     run_data["general"]["std_survival"] = np.std(survival_times)
+    run_data["general"]["moe_confidence_survival"] = calculate_confidence_interval(survival_times)[3]
 
     run_data["general"]["mean_gains"] = np.mean(gains_values)
     run_data["general"]["std_gains"] = np.std(gains_values)
+    run_data["general"]["moe_confidence_gains"] = calculate_confidence_interval(gains_values)[3]
 
     run_data["general"]["mean_efficiency"] = np.mean(efficiency_values)
     run_data["general"]["std_efficiency"] = np.std(efficiency_values)
+    run_data["general"]["moe_confidence_efficiency"] = calculate_confidence_interval(efficiency_values)[3]
 
     run_data["general"]["mean_equality"] = np.mean(equality_values)
     run_data["general"]["std_equality"] = np.std(equality_values)
+    run_data["general"]["moe_confidence_equality"] = calculate_confidence_interval(equality_values)[3]
 
     run_data["general"]["mean_over_usage"] = np.mean(over_usage_values)
     run_data["general"]["std_over_usage"] = np.std(over_usage_values)
+    run_data["general"]["moe_confidence_over_usage"] = calculate_confidence_interval(over_usage_values)[3]
 
     if "universalization" in group:
         experiment_route = f"{experiment}/universalization"
