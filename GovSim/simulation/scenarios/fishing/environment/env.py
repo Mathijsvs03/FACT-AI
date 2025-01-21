@@ -146,7 +146,6 @@ class FishingConcurrentEnv(ConcurrentEnv):
             prompt = cons(sustainability_threshold)
         else:
             raise ValueError(f"Reasoning strategy {reasoning} not recognised")
-        print("Prompt: ", prompt)
         return prompt
 
 

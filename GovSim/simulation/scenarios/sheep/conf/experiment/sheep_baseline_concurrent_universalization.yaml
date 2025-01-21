@@ -3,4 +3,4 @@ defaults:
 
 env:
   name: sheep_baseline_concurrent_universalization
-  inject_universalization: true
+  inject_social_reasoning: "universalization"

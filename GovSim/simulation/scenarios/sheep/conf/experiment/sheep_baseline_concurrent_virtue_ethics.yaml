@@ -1,0 +1,6 @@
+defaults:
+  - sheep_baseline_concurrent
+
+env:
+  name: sheep_baseline_concurrent_virtue_ethics
+  inject_social_reasoning: "virtue_ethics"

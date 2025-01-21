@@ -71,14 +71,14 @@ class ConcurrentEnv:
             )
         ]
         sustainability_threshold = self.internal_global_state["sustainability_threshold"]
-        reasoning = self.cfg.inject_reasoning_prompt
+        reasoning = self.cfg.inject_social_reasoning
         if reasoning or not reasoning == "baseline":
             # Util number maximizes the number of harvested resources whilst making sure that
             # the resources reach the cap after regeneration.
             util_number = max(0, self.internal_global_state["resource_in_pool"] +
                               self.internal_global_state["resource_before_harvesting"]
                               // (-2))
-            least_fortunate = self.agent_id_to_name(min(self.rewards, key=self.rewards.get)) \
+            least_fortunate = self.agent_id_to_name[min(self.rewards, key=self.rewards.get)] \
                                 if self.rewards else None
             events.append(
                 PersonaEvent(
