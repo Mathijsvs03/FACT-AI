@@ -51,7 +51,7 @@ def main():
         'Meta-Llama-3-8B-Instruct': 'meta-llama/Meta-Llama-3-8B-Instruct',
         'Mistral-7B-Instruct-v0.2': 'mistralai/Mistral-7B-Instruct-v0.2'
     }
-    experiments = ['pollution_baseline_concurrent', 'pollution_baseline_concurrent_universalization']
+    experiments = ['fishing_baseline_concurrent_consequentialism', 'pollution_baseline_concurrent_consequentialism', 'sheep_baseline_concurrent_consequentialism']
 
     for model in models:
         for experiment in experiments:
