@@ -1,0 +1,6 @@
+defaults:
+  - fish_baseline_concurrent
+
+env:
+  name: fish_baseline_concurrent_maximin_principle
+  inject_social_reasoning: "maximin_principle"

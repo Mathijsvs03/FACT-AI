@@ -55,13 +55,11 @@ class ConcurrentEnv:
     def _prompt_pool_amount_of_resource_after_harvesting(self, agent):
         raise NotImplementedError
 
-    def _prompt_universalization(self, sustainability_threshold):
+    def _prompt_social_reasoning(self, reasoning, sustainability_threshold,
+                                                  util_number, least_fortunate):
         raise NotImplementedError
 
     def _observe_pool(self, agent) -> HarvestingObs:
-        sustainability_threshold = self.internal_global_state[
-            "sustainability_threshold"
-        ]
         events = [
             PersonaEvent(
                 self._prompt_pool_amount_of_resource(),
@@ -72,10 +70,20 @@ class ConcurrentEnv:
                 always_include=True,
             )
         ]
-        if self.cfg.inject_universalization:
+        sustainability_threshold = self.internal_global_state["sustainability_threshold"]
+        reasoning = self.cfg.inject_reasoning_prompt
+        if reasoning or not reasoning == "baseline":
+            # Util number maximizes the number of harvested resources whilst making sure that
+            # the resources reach the cap after regeneration.
+            util_number = max(0, self.internal_global_state["resource_in_pool"] +
+                              self.internal_global_state["resource_before_harvesting"]
+                              // (-2))
+            least_fortunate = self.agent_id_to_name(min(self.rewards, key=self.rewards.get)) \
+                                if self.rewards else None
             events.append(
                 PersonaEvent(
-                    self._prompt_universalization(sustainability_threshold),
+                    self._prompt_social_reasoning(reasoning, sustainability_threshold,
+                                                  util_number, least_fortunate),
                     created=self.internal_global_state["next_time"][agent],
                     expiration=get_expiration_next_month(
                         self.internal_global_state["next_time"][agent]
@@ -214,8 +222,8 @@ class ConcurrentEnv:
             "resource_in_pool": self.cfg.initial_resource_in_pool,
             "resource_before_harvesting": self.cfg.initial_resource_in_pool,
             "sustainability_threshold": (
-                10
-            ),  # each day the fish double and cap at 100, so maximum 50 can be fished
+                int((self.cfg.initial_resource_in_pool // 2) // float(self.cfg.num_agents))
+            ),  # max fish each agent can catch, that ensures no shrinkage in fish population
             "collected_resource": {},
             "wanted_resource": {},
             "last_collected_resource": {},
@@ -434,7 +442,7 @@ class ConcurrentEnv:
                 self.internal_global_state["resource_in_pool"] = min(
                     self.cfg.initial_resource_in_pool,
                     self.internal_global_state["resource_in_pool"] * 2,
-                )  # Double the fish in the lake, but cap at 100
+                )  # Double the fish in the lake, but cap at the starting total
                 self.internal_global_state["resource_before_harvesting"] = (
                     self.internal_global_state["resource_in_pool"]
                 )

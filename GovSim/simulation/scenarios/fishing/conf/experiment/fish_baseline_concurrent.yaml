@@ -19,7 +19,7 @@ env:
   num_agents: 5
   harvesting_order: concurrent # random-sequential, concurrent
   assign_resource_strategy: stochastic # proportional, stochastic
-  inject_universalization: false
+  inject_social_reasoning: "baseline" # "baseline"/"", "universalization", "deontology", "virtue_ethics", "utilitarianism", "maximin_principle", "consequentialism"
   inject_scenario_dynamic: false
   perturbations: []
     # - perturbation:
